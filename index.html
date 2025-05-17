@@ -2,14 +2,29 @@
 <html lang="ar">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>الهروب من المتاهة</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <h1>الهروب من المتاهة</h1>
+
   <div id="maze"></div>
-  <p id="status">استخدم الأسهم للتحرك.</p>
+
+  <div id="status"></div>
+  <p>عدد الخطوات: <span id="steps">0</span></p>
+
+  <div id="controls">
+    <button onclick="movePlayer(0, -1)">↑</button>
+    <div>
+      <button onclick="movePlayer(-1, 0)">←</button>
+      <button onclick="movePlayer(1, 0)">→</button>
+    </div>
+    <button onclick="movePlayer(0, 1)">↓</button>
+  </div>
+
+  <audio id="winSound" src="https://cdn.pixabay.com/download/audio/2022/10/05/audio_163b1b6c1b.mp3" preload="auto"></audio>
+
   <script src="script.js"></script>
 </body>
 </html>
