@@ -1,26 +1,24 @@
 body {
-  font-family: 'Segoe UI', sans-serif;
+  font-family: "Arial", sans-serif;
   text-align: center;
   background-color: #f4f4f4;
-  margin: 0;
-  padding: 20px;
+  direction: rtl;
 }
 
 #maze {
   display: grid;
-  grid-template-columns: repeat(10, 30px);
-  grid-template-rows: repeat(10, 30px);
+  grid-template-columns: repeat(50, 10px); /* عرض المسار أصغر 5 أضعاف */
+  grid-template-rows: repeat(50, 10px); /* ارتفاع المسار أصغر 5 أضعاف */
   gap: 1px;
+  justify-content: center;
   margin: 20px auto;
-  width: fit-content;
-  border: 2px solid #333;
+  border: 3px solid #333;
 }
 
 .cell {
-  width: 30px;
-  height: 30px;
+  width: 10px; /* أصغر المسارات */
+  height: 10px; /* أصغر المسارات */
   background-color: white;
-  box-sizing: border-box;
   border: 1px solid #ccc;
 }
 
@@ -28,49 +26,37 @@ body {
   background-color: #333;
 }
 
-.start {
+.player {
   background-color: green;
 }
 
-.end {
+.exit {
   background-color: blue;
 }
 
-.player {
-  background-color: red !important;
-}
-
-#controls {
-  margin-top: 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 10px;
-}
-
 #controls button {
-  width: 60px;
-  height: 60px;
-  font-size: 24px;
-  font-weight: bold;
-  border: none;
-  background-color: #ddd;
-  border-radius: 10px;
-  box-shadow: 1px 1px 3px #aaa;
+  font-size: 20px;
+  margin: 5px;
+  padding: 10px 20px;
   cursor: pointer;
-  transition: background-color 0.2s ease;
 }
 
-#controls button:hover {
-  background-color: #ccc;
+#status {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #007700;
 }
 
-#controls div {
-  display: flex;
-  gap: 20px;
+#restartBtn {
+  padding: 10px 20px;
+  font-size: 18px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
-h1 {
-  font-size: 2rem;
-  color: #222;
+#restartBtn:hover {
+  background-color: #0056b3;
 }
