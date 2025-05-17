@@ -1,0 +1,41 @@
+body {
+  font-family: Tahoma, sans-serif;
+  text-align: center;
+  background-color: #f4f4f4;
+  direction: rtl;
+}
+
+#maze {
+  display: grid;
+  grid-template-columns: repeat(10, 30px);
+  grid-template-rows: repeat(10, 30px);
+  margin: 20px auto;
+  width: 300px;
+  height: 300px;
+  border: 2px solid #333;
+}
+
+.cell {
+  width: 30px;
+  height: 30px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+}
+
+.wall {
+  background-color: #444;
+}
+
+.player {
+  background-color: #3498db;
+}
+
+.goal {
+  background-color: #2ecc71;
+}
+
+#status {
+  font-size: 18px;
+  margin-top: 20px;
+  color: #333;
+}
