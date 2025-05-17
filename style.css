@@ -1,0 +1,49 @@
+body {
+  font-family: Tahoma, sans-serif;
+  text-align: center;
+  background-color: #f4f4f4;
+  padding: 20px;
+}
+
+#maze {
+  display: grid;
+  grid-template-columns: repeat(20, 20px);
+  grid-template-rows: repeat(20, 20px);
+  gap: 1px;
+  margin: 20px auto;
+}
+
+.cell {
+  width: 20px;
+  height: 20px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+}
+
+.wall {
+  background-color: #000;
+}
+
+.player {
+  background-color: green;
+}
+
+.exit {
+  background-color: blue;
+}
+
+#restartBtn {
+  display: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  margin-top: 20px;
+  background-color: #2196f3;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#restartBtn:hover {
+  background-color: #0d8ddc;
+}
